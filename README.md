@@ -5,7 +5,7 @@
 * Should have ay least one movie/ show in your IMDb watchlist
 * Python 3.x must be installed in your machine
 
-### Procedure:
+### Procedure for watchlist:
 * Go to your IMDb watchlist and scroll to the bottom of the page. You will find an option "Export this list". Once you click it, a file named "WATCHLIST.csv" gets downloaded to your machine. Do not rename the file.
 * Download the importlist.py file and place it in the same folder where the WATCHLIST.csv file is residing.
 * Go to your JustWatch account and open DevTools by clicking F12.
@@ -18,3 +18,8 @@
 * Save the file. Open your command prompt or terminal and run ```python3 importlist.py```.
 
 Refer [this issue](https://github.com/prasanth-G24/Imdb_to_JustWatch/issues/2) for screenshots.
+
+### Procedure for seenlist:
+* Go to your IMDb ratings and click to three dots on the top of the page. You will find an option "Export". Once you click it, a file named "ratings.csv" gets downloaded to your machine. Do not rename the file.
+* Download the import_seenlist.py file and place it in the same folder where the ratings.csv file is residing.
+* The rest is the same as watchlist.
