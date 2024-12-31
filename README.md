@@ -6,18 +6,15 @@
 * Python 3.x must be installed in your machine
 
 ### Procedure for watchlist:
-* Go to your IMDb watchlist and scroll to the bottom of the page. You will find an option "Export this list". Once you click it, a file named "WATCHLIST.csv" gets downloaded to your machine. Do not rename the file.
-* Download the import_watchlist.py file and place it in the same folder where the WATCHLIST.csv file is residing.
-* Go to your JustWatch account and open DevTools by clicking F12.
+* Go to your IMDb watchlist and scroll to the bottom of the page. You will find an option "Export this list". Once you click it, a file gets downloaded to your machine. Rename the file as WATCHLIST.py.
+* Download the import_watchlist.py file from this repository and place it in the same folder where the WATCHLIST.csv file is present.
+* Go to your JustWatch account and open DevTools.
 * Go to the network tab in DevTools.
-* Add a random movie/ show to your watchlist (This step is necessary because you need to find the justwatch id and authtoken of your account. Once they provide any other way to obtain these values, I will update here).
-* Click the one that has the status "204".
-*  Go to the request headers section. You need to do 2 things.
-1) From the ```path``` header, Copy the value of ```justwatch_id=```. Then paste it in line no. 32 of the import_watchlist.py file.
-2) From the```authorization``` header, Copy the authorization token and paste this at line no. 33 of the import_watchlist.py file.
+* Add a random movie/ show to your watchlist (This step is necessary because you need to find the authorization token of your account. Once they provide any other way to obtain the value, I will update here).
+* Click any request that says "graphql".
+* Go to the request headers section.
+* From the```authorization``` header, Copy the authorization token and paste this at line no. 100 of the import_watchlist.py file. Refer [this](https://github.com/prasanth-G24/Imdb_to_JustWatch/issues/3#issuecomment-2566439959) for screenshot.
 * Save the file. To import your watchlist, Open your command prompt or terminal and run ```python3 import_watchlist.py```.
-
-Refer [this issue](https://github.com/prasanth-G24/Imdb_to_JustWatch/issues/2) for screenshots.
 
 ### Procedure for seenlist:
 * Go to your IMDb ratings and click to three dots on the top of the page. You will find an option "Export". Once you click it, a file named "ratings.csv" gets downloaded to your machine. Do not rename the file.
