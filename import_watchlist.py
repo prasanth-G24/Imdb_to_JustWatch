@@ -97,7 +97,7 @@ def get_id(title, type, year):
         conn.close()
 
 def add_to_watchlist(id):
-    token = '<your_token>'
+    token = '<your token>'
     headers["Authorization"] = "Bearer " + token
     conn = http.client.HTTPSConnection("apis.justwatch.com")
     try:
@@ -109,7 +109,6 @@ def add_to_watchlist(id):
         payload_json = json.dumps(payload)
         conn.request("POST", "/graphql", payload_json, headers)
         response = conn.getresponse()
-        print(response.read().decode())
         return (response.getcode() == 200)
     except Exception as e:
         return
